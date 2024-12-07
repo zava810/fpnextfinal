@@ -1,0 +1,29 @@
+"use client";
+import '@/app/ui/global.css';
+import React, { useContext } from 'react';
+import { FontProvider, FontContext } from '@/FontContext';
+import { FontPicker } from '@/app/ui/FontPicker';
+export default function RootLayout({ children, }: { children: React.ReactNode; }) {
+  const { fontcn } = useContext(FontContext);
+  return (
+    <html lang="en">
+        <body className={`${fontcn} antialiased`}>
+        <FontProvider>{children}</FontProvider>
+        </body>
+    </html>
+  );
+}
+
+// import { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: {
+//     template: '%s | Acme dAshboArd',
+//     default: 'Acme dAshboArd',
+//   },
+//   description: 'The official Next.js Learn Dashboard built with App Router.',
+//   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+// };
+  // https://stackoverflow.com/questions/72946973/how-to-access-a-state-of-an-component-from-another-component-in-next-js
+  // const [selectedFont, setSelectedFont] = useState(ing115_font);
+  ////binaryhoriontal115.woff2  hex115.woff2 binaryvertical115.woff2
