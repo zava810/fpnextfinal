@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
@@ -52,3 +52,19 @@ export default function Page() {
     </main>
   );
 }
+
+// // Step 4: Use the FontPicker Component
+// // In any component where you want to use the font picker:
+// import React, { useContext } from "react";
+// import FontContext from "../context/FontContext";
+// import FontPicker from "./FontPicker";
+// const MyComponent = () => {
+//   const { font } = useContext(FontContext);
+//   return (
+//     <div style={{ fontFamily: font }}>
+//       <p>This text will change font</p>
+//       <FontPicker />
+//     </div>
+//   );
+// };
+// export default MyComponent;
